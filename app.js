@@ -1,5 +1,8 @@
 const express = require('express');
 const path = require('path');
+const morgan = require('morgan');
+const cookieParser = require('morgan');
+
 
 const app = express(); // express 모듈을 app변수에 할당
 
@@ -31,4 +34,4 @@ app.use((err, req, res, next)=>{
 
 app.listen(app.get('port'), () => {
     console.log(app.get('port'), '번 포트에서 대기 중');
-})
+});
